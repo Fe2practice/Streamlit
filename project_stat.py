@@ -92,27 +92,28 @@ def render():
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    # 3. 분석 산출물 예시
+    # 3. 분석 결과 예시
     st.markdown("### 3. 분석 결과 예시")
     
-    def display_stat_image(path, caption):
+    # 함수 이름을 display_project_image 로 통일!
+    def display_project_image(path, caption):
         if os.path.exists(path):
-            _, mid, _ = st.columns([1, 3, 1]) # 🎯 2/3 너비 유지
+            _, mid, _ = st.columns([1, 3, 1]) 
             with mid:
                 st.image(path, caption=caption, use_container_width=True)
         else:
             st.markdown(f"<div class='img-placeholder'>{caption}<br>(파일 대기 중: {path})</div>", unsafe_allow_html=True)
 
-    # 텍스트 마이닝 섹션
-    st.markdown("#### 1. 텍스트마이닝")
+    # 호출할 때도 display_project_image 로 사용!
+    st.markdown("#### ① 텍스트 마이닝 분석 (Word Cloud & Network)")
     c1_1, c1_2 = st.columns(2)
     with c1_1: display_project_image("./STAT/her-61-3-475_1.png", "작성 논문")
     with c1_2: display_project_image("./STAT/1._포트폴리오 (1)_13.png", "분석 예시")
 
     # 요인분석/SEM 섹션
     st.markdown("#### ② 요인분석")
-    display_stat_image("./STAT/요인분석.png", "요인분석 (예시)")
+    display_project_image("./STAT/요인분석.png", "요인분석 (예시)")
 
     #  구조방정식
     st.markdown("#### ③ 구조방정식")
-    display_stat_image("./STAT/sem.png", "SEM 분석 (예시)")
+    display_project_image("./STAT/sem.png", "SEM 분석 (예시)")
