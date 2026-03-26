@@ -60,9 +60,9 @@ st.markdown(f"""
   <div><b>2026.03.20. 업데이트</b></div>
   <div>
     <a href='?section=home#top' target='_self'>홈</a>
-    <a href='?section=kaia#top' target='_self'>KAIA(국토교통과학기술진흥원)</a>
-    <a href='?section=keit#top' target='_self'>KEIT(한국산업기술기획평가원)</a>
-    <a href='?section=rda#top' target='_self'>RDA(농촌진흥청)</a>
+    <a href='?section=kaia#top' target='_self'>KAIA</a>
+    <a href='?section=keit#top' target='_self'>KEIT</a>
+    <a href='?section=rda#top' target='_self'>RDA</a>
     <a href='?section=stat#top' target='_self'>통계분석</a>
     <a href='?section=intro#top' target='_self'>자기소개서</a>
 
